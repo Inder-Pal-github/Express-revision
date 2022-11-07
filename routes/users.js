@@ -6,11 +6,13 @@ userRouter.get("/", (req, res) => {
   res.send("User List");
 });
 
-userRouter.post("/", (req, res) => {
-  res.send("User form");
-});
 userRouter.get("/new", (req, res) => {
-  res.send("User form");
+  res.render("users/new")
+});
+userRouter.post("/", (req, res) => {
+  console.log(req.body.firstName);
+  res.send("Hi")
+
 });
 
 userRouter
